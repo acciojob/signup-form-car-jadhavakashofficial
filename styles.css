@@ -1,62 +1,78 @@
-* {
-  box-sizing: border-box;
-}
-
+/* General Styling */
 body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
 }
 
-h1 {
-  text-align: center;
+/* Form Container */
+.form-container {
+    background: white;
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+h2 {
+    color: #333;
+}
+
+/* Form Elements */
 form {
-  background: #fff;
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.form-group {
-  margin-bottom: 15px;
+label {
+    margin-top: 10px;
+    font-weight: bold;
+    display: block;
+    width: 80%;
+    text-align: left;
 }
 
-.form-group label {
-  display: inline-block;
-  margin-bottom: 5px;
-  font-weight: bold;
+input, select {
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.form-group input,
-.form-group select {
-  width: 100%;
-  padding: 8px;
-  margin-top: 2px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+/* Gender Radio Buttons */
+.gender-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 80%;
+    margin-top: 5px;
 }
 
-.checkbox-group {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+/* Terms of Service Checkbox */
+.tos-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 80%;
+    margin-top: 10px;
 }
 
+/* Submit Button */
 button {
-  width: 100%;
-  padding: 10px;
-  background-color: #008CBA;
-  color: #fff;
-  font-size: 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+    width: 80%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover {
-  background-color: #005f73;
+    background-color: #218838;
 }

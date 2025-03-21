@@ -1,134 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>HTML Signup Form Creation</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Signup Form</h1>
+    <div class="form-container">
+        <h2>Signup Form</h2>
+        <form method="post">
+            
+            <!-- Name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Name" required>
 
-  <form id="signupForm" method="post">
-    <div class="form-group">
-      <label for="name">Name:</label>
-      <input 
-        type="text" 
-        id="name" 
-        name="name" 
-        placeholder="Name" 
-        required
-      >
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+
+            <!-- Gender -->
+            <label>Gender:</label>
+            <div class="gender-options">
+                <input type="radio" id="gender_m" name="gender" value="Male" required>
+                <label for="gender_m">Male</label>
+
+                <input type="radio" id="gender_f" name="gender" value="Female" required>
+                <label for="gender_f">Female</label>
+            </div>
+
+            <!-- Car Brands -->
+            <label for="cars">Car Brands:</label>
+            <select id="cars" name="cars" required>
+                <option value="" disabled selected>--Please choose an option--</option>
+                <option value="toyota">Toyota</option>
+                <option value="honda">Honda</option>
+                <option value="bmw">BMW</option>
+                <option value="mercedes">Mercedes</option>
+            </select>
+
+            <!-- Age -->
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Age" required>
+
+            <!-- DOB -->
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <!-- Phone Number -->
+            <label for="tel">Phone Number:</label>
+            <input type="tel" id="tel" name="tel" placeholder="xxx-xxx-xxxx">
+
+            <!-- Password -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+
+            <!-- Terms of Service -->
+            <div class="tos-container">
+                <input type="checkbox" id="tos" name="tos" required>
+                <label for="tos">I agree to the Terms of Service</label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+
+        </form>
     </div>
 
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input 
-        type="email" 
-        id="email" 
-        name="email" 
-        placeholder="Email" 
-        required
-      >
-    </div>
-
-    <div class="form-group">
-      <span>Gender:</span>
-      <label for="gender_m">Male</label>
-      <input 
-        type="radio" 
-        id="gender_m" 
-        name="gender" 
-        value="Male"
-      >
-      <label for="gender_f">Female</label>
-      <input 
-        type="radio" 
-        id="gender_f" 
-        name="gender" 
-        value="Female"
-      >
-      <label for="gender_o">Other</label>
-      <input 
-        type="radio" 
-        id="gender_o" 
-        name="gender" 
-        value="Other"
-      >
-    </div>
-
-    <div class="form-group">
-      <label for="cars">Car Brands:</label>
-      <select id="cars" name="cars" required>
-        <option value="">--Please choose an option--</option>
-        <option value="Toyota">Toyota</option>
-        <option value="Ford">Ford</option>
-        <option value="Honda">Honda</option>
-        <option value="BMW">BMW</option>
-        <option value="Tesla">Tesla</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="age">Age:</label>
-      <input 
-        type="number" 
-        id="age" 
-        name="age" 
-        placeholder="Age" 
-        min="1"
-        required
-      >
-    </div>
-
-    <div class="form-group">
-      <label for="dob">DOB:</label>
-      <input 
-        type="date" 
-        id="dob" 
-        name="dob" 
-        placeholder="xxxx-xx-xxxx" 
-        required
-      >
-    </div>
-
-    <div class="form-group">
-      <label for="phone">Phone Number:</label>
-      <input 
-        type="tel" 
-        id="phone" 
-        name="phone" 
-        placeholder="xxx-xxx-xxxx" 
-        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
-        required
-      >
-    </div>
-
-    <div class="form-group">
-      <label for="password">Password:</label>
-      <input 
-        type="password" 
-        id="password" 
-        name="password" 
-        placeholder="Password" 
-        required
-      >
-    </div>
-
-    <div class="form-group checkbox-group">
-      <label for="tos">
-        <input 
-          type="checkbox" 
-          id="tos" 
-          name="tos"
-        >
-        I agree to the TOS
-      </label>
-    </div>
-
-    <button type="submit" id="submitBtn">Submit</button>
-  </form>
-
-  <script src="script.js"></script>
 </body>
 </html>
